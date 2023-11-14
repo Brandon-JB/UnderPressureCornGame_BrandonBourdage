@@ -48,7 +48,7 @@ public class Popcorn : MonoBehaviour
         popImage.sprite = uncookedPopcorn;
 
 
-        timeCooked = 0;
+        timeCooked = Random.Range(0f, 5f);
         timeDone = 0;
         timeBurnt = 0;
 
@@ -112,7 +112,16 @@ public class Popcorn : MonoBehaviour
 
     public void ResetBucket()
     {
-        timeCooked = 0;
+        if (isBurnt == false && isDone == false)
+        {
+            strikeScript.strikes++;
+        }
+        else if (isBurnt == true)
+        {
+            strikeScript.strikes++;
+        }
+
+        timeCooked = Random.Range(0f, 5f);
         timeDone = 0;
         timeBurnt = 0;
 
@@ -122,16 +131,9 @@ public class Popcorn : MonoBehaviour
         popImage.sprite = uncookedPopcorn;
 
         tempScript.Burnt = false;
-        tempScript.temperature = 100;
+        //tempScript.temperature = Random.Range(75f, 125f);
         tempScript.InRed = false;
 
-        if (isBurnt == false && isDone == false)
-        {
-            strikeScript.strikes++;
-        }
-        else if (isBurnt == true)
-        {
-            strikeScript.strikes++;
-        }
+        
     }
 }

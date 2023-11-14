@@ -755,9 +755,9 @@ MonoBehaviour:
   uncookedPopcorn: {fileID: 21300000, guid: 49a75d3037631a547a53669caab20f1c, type: 3}
   cookedPopcorn: {fileID: 21300000, guid: e75385611b2a2c94ca2fd41957b31339, type: 3}
   burntPopcorn: {fileID: 21300000, guid: d0daf89314791bf468d53168dc171b60, type: 3}
-  timeToCook: 7
-  timeToBurn: 10
-  timeToExplode: 12
+  timeToCook: 10
+  timeToBurn: 3
+  timeToExplode: 3
   tempBar: {fileID: 1038421764071221302}
   strikesChecks: {fileID: 0}
 --- !u!114 &6160831623844520554

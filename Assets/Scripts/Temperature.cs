@@ -21,7 +21,7 @@ public class Temperature : MonoBehaviour
         Burnt = false;
         InRed = false;
         TimeInRed = 0;
-        temperature = 100;
+        temperature = Random.Range(75f, 125f);
         tempBar = GetComponent<Image>();
     }
 
@@ -30,15 +30,15 @@ public class Temperature : MonoBehaviour
     {
         if (temperature > 0 && temperature < maxTemperature)
         {
-            temperature += Random.Range(-1f, 1f);
+            temperature += Random.Range(-1.3f, 1.3f) * Time.timeScale;
         }
         else if (temperature <= 0)
         {
-            temperature += Random.Range(0f, 1f);
+            temperature += Random.Range(0f, 1f) * Time.timeScale;
         }
         else if (temperature >= maxTemperature)
         {
-            temperature -= Random.Range(0f, 1f);
+            temperature -= Random.Range(0f, 1f) * Time.timeScale;
         }
 
         tempBar.fillAmount = temperature / maxTemperature;
