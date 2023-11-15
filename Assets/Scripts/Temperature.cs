@@ -10,7 +10,7 @@ public class Temperature : MonoBehaviour
     private Image tempBar;
 
     public float TimeToBurn;
-    private float TimeInRed;
+    public float TimeInRed;
 
     public bool InRed;
     public bool Burnt;

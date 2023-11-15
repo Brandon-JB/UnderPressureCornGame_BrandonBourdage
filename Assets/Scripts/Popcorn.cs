@@ -124,6 +124,7 @@ public class Popcorn : MonoBehaviour
         timeCooked = Random.Range(0f, 5f);
         timeDone = 0;
         timeBurnt = 0;
+        tempScript.TimeInRed = 0;
 
         isDone = false;
         isBurnt = false;
