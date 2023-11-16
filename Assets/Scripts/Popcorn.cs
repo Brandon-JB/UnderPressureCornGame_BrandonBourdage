@@ -78,7 +78,7 @@ public class Popcorn : MonoBehaviour
 
     void TimeManagement()
     {
-        if (timeCooked >= timeToCook)
+        if (timeCooked >= timeToCook && isBurnt == false)
         {
             //sr.sprite = cookedPopcorn;
             popImage.sprite = cookedPopcorn;

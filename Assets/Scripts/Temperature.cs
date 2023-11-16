@@ -30,15 +30,15 @@ public class Temperature : MonoBehaviour
     {
         if (temperature > 0 && temperature < maxTemperature)
         {
-            temperature += Random.Range(-1.3f, 1.3f) * Time.timeScale;
+            temperature += Random.Range(-3f, 3f) * Time.timeScale;
         }
         else if (temperature <= 0)
         {
-            temperature += Random.Range(0f, 1f) * Time.timeScale;
+            temperature += Random.Range(0f, 3f) * Time.timeScale;
         }
         else if (temperature >= maxTemperature)
         {
-            temperature -= Random.Range(0f, 1f) * Time.timeScale;
+            temperature -= Random.Range(0f, 3f) * Time.timeScale;
         }
 
         tempBar.fillAmount = temperature / maxTemperature;
