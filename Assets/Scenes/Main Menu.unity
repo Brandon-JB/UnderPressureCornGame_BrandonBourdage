@@ -282,8 +282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21.245, y: -7.865}
-  m_SizeDelta: {x: 1615.614, y: 667.735}
+  m_AnchoredPosition: {x: 21.245, y: -30.2519}
+  m_SizeDelta: {x: 1615.614, y: 712.5087}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201792258
 MonoBehaviour:
@@ -743,7 +743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -407.28}
+  m_AnchoredPosition: {x: 0, y: -467.5}
   m_SizeDelta: {x: 535, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &656575612
@@ -2153,16 +2153,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Your goal is to cook buckets of popcorn without messing up 3 times for
-    a minute.\n\nThe temperature is indicated by the black bar below the red and
-    green bar and \nwill randomly increase or decrease by random amount.\n\nYou need
-    to keep the temperature in the green part of the bar by pressing the \nminus
+    a minute. The colors of the popcorn are like a banana. Green = Too early; Yellow
+    = Good; Black = Bad\n\nThe temperature is indicated by the black bar below the
+    red and green bar and \nwill randomly increase or decrease by random amount.\n\nYou
+    need to keep the temperature in the green part of the bar by pressing the \nminus
     sign to lower it and plus sign to increase it. If you don't burn it, you will
     \nperfectly cook it and will need to click on it to take it out of the bucket.
     Clicking\non the popcorn also refills the bucket.\n\nIf the temperature is in
     the red for too long, the popcorn will burn. Leaving perfectly cooked popcorn
     in the bucket too long also burns it. Leave it burnt too long and it generates
     an \"explosive\" reaction.\n\nIf you click on the popcorn while it is undercooked
-    or burnt, you will get a strike. Three strikes and you lose."
+    or burnt, you will get a strike. Three strikes and you lose. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
