@@ -125,6 +125,9 @@ public class Popcorn : MonoBehaviour
         timeDone = 0;
         timeBurnt = 0;
         tempScript.TimeInRed = 0;
+        tempScript.temperature = 100;
+
+        tempScript.RerollFavor();
 
         isDone = false;
         isBurnt = false;

@@ -15,6 +15,8 @@ public class Temperature : MonoBehaviour
     public bool InRed;
     public bool Burnt;
     public GameObject DangerTriangle;
+
+    public bool favorUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,22 +25,42 @@ public class Temperature : MonoBehaviour
         TimeInRed = 0;
         temperature = Random.Range(75f, 125f);
         tempBar = GetComponent<Image>();
+
+        RerollFavor();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (temperature > 0 && temperature < maxTemperature)
+        if (favorUp == true)
         {
-            temperature += Random.Range(-3f, 3f) * Time.timeScale;
+            if (temperature > 0 && temperature < maxTemperature)
+            {
+                temperature *= Random.Range(0.99f, 1.011f) * Time.timeScale;
+            }
+            else if (temperature <= 0)
+            {
+                temperature += Random.Range(0f, 10f) * Time.timeScale;
+            }
+            else if (temperature >= maxTemperature)
+            {
+                temperature -= Random.Range(0f, 10f) * Time.timeScale;
+            }
         }
-        else if (temperature <= 0)
+        else if (favorUp == false)
         {
-            temperature += Random.Range(0f, 3f) * Time.timeScale;
-        }
-        else if (temperature >= maxTemperature)
-        {
-            temperature -= Random.Range(0f, 3f) * Time.timeScale;
+            if (temperature > 0 && temperature < maxTemperature)
+            {
+                temperature *= Random.Range(0.989f, 1.01f) * Time.timeScale;
+            }
+            else if (temperature <= 0)
+            {
+                temperature += Random.Range(0f, 10f) * Time.timeScale;
+            }
+            else if (temperature >= maxTemperature)
+            {
+                temperature -= Random.Range(0f, 10f) * Time.timeScale;
+            }
         }
 
         tempBar.fillAmount = temperature / maxTemperature;
@@ -77,11 +99,23 @@ public class Temperature : MonoBehaviour
 
     public void PlusSign()
     {
-        temperature += 20f;
+        temperature *= 1.4f;
     }
 
     public void MinusSign()
     {
-        temperature -= 20f;
+        temperature *= 0.6f;
+    }
+
+    public void RerollFavor()
+    {
+        if (Random.Range(-1f, 1f) >= 0)
+        {
+            favorUp = true;
+        }
+        else if (Random.Range(-1f, 1f) < 0)
+        {
+            favorUp = false;
+        }
     }
 }
