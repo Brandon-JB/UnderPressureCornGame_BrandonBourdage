@@ -38,6 +38,12 @@ public class Popcorn : MonoBehaviour
     [Header("State of Popcorn")]
     private bool isDone;
     private bool isBurnt;
+
+    [Header("Sound")]
+
+    public AudioSource IncorrectBeep;
+    public AudioSource CorrectDing;
+    public AudioSource panicSound;
     
 
     void Start()
@@ -72,6 +78,12 @@ public class Popcorn : MonoBehaviour
         {
             isBurnt = true;
             popImage.sprite = burntPopcorn;
+        }
+
+
+        if (isBurnt == true && panicSound.isPlaying == false)
+        {
+            panicSound.Play();
         }
     }
 
@@ -112,13 +124,21 @@ public class Popcorn : MonoBehaviour
 
     public void ResetBucket()
     {
+        panicSound.Stop();
+
         if (isBurnt == false && isDone == false)
         {
             strikeScript.strikes++;
+            IncorrectBeep.Play();
         }
         else if (isBurnt == true)
         {
             strikeScript.strikes++;
+            IncorrectBeep.Play();
+        }
+        else
+        {
+            CorrectDing.Play();
         }
 
         timeCooked = Random.Range(0f, 5f);

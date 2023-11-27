@@ -50,6 +50,6 @@ public class MainMenu: MonoBehaviour
         Credits.SetActive(false);
         Instructions.SetActive(false);
         buttons.SetActive(true);
-        backButton.SetActive(true);
+        backButton.SetActive(false);
     }
 }

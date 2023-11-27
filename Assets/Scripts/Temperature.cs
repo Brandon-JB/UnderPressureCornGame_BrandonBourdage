@@ -32,34 +32,37 @@ public class Temperature : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (favorUp == true)
+        if (Time.timeScale != 0)
         {
-            if (temperature > 0 && temperature < maxTemperature)
+            if (favorUp == true)
             {
-                temperature *= Random.Range(0.99f, 1.011f) * Time.timeScale;
+                if (temperature > 0 && temperature < maxTemperature)
+                {
+                    temperature *= Random.Range(0.99f, 1.011f);
+                }
+                else if (temperature <= 0)
+                {
+                    temperature += Random.Range(0f, 10f);
+                }
+                else if (temperature >= maxTemperature)
+                {
+                    temperature -= Random.Range(0f, 10f);
+                }
             }
-            else if (temperature <= 0)
+            else if (favorUp == false)
             {
-                temperature += Random.Range(0f, 10f) * Time.timeScale;
-            }
-            else if (temperature >= maxTemperature)
-            {
-                temperature -= Random.Range(0f, 10f) * Time.timeScale;
-            }
-        }
-        else if (favorUp == false)
-        {
-            if (temperature > 0 && temperature < maxTemperature)
-            {
-                temperature *= Random.Range(0.989f, 1.01f) * Time.timeScale;
-            }
-            else if (temperature <= 0)
-            {
-                temperature += Random.Range(0f, 10f) * Time.timeScale;
-            }
-            else if (temperature >= maxTemperature)
-            {
-                temperature -= Random.Range(0f, 10f) * Time.timeScale;
+                if (temperature > 0 && temperature < maxTemperature)
+                {
+                    temperature *= Random.Range(0.989f, 1.01f);
+                }
+                else if (temperature <= 0)
+                {
+                    temperature += Random.Range(0f, 10f);
+                }
+                else if (temperature >= maxTemperature)
+                {
+                    temperature -= Random.Range(0f, 10f);
+                }
             }
         }
 
