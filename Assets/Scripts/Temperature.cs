@@ -102,12 +102,12 @@ public class Temperature : MonoBehaviour
 
     public void PlusSign()
     {
-        temperature *= 1.4f;
+        temperature *= 1.6f;
     }
 
     public void MinusSign()
     {
-        temperature *= 0.6f;
+        temperature *= 0.65f;
     }
 
     public void RerollFavor()
