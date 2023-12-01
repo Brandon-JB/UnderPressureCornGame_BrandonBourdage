@@ -38,7 +38,7 @@ public class Temperature : MonoBehaviour
             {
                 if (temperature > 0 && temperature < maxTemperature)
                 {
-                    temperature *= Random.Range(0.99f, 1.011f);
+                    temperature *= Random.Range(0.99f, 1.02f);
                 }
                 else if (temperature <= 0)
                 {
@@ -53,7 +53,7 @@ public class Temperature : MonoBehaviour
             {
                 if (temperature > 0 && temperature < maxTemperature)
                 {
-                    temperature *= Random.Range(0.989f, 1.01f);
+                    temperature *= Random.Range(0.98f, 1.01f);
                 }
                 else if (temperature <= 0)
                 {
