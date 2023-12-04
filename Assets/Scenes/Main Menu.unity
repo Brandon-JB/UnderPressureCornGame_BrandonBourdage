@@ -193,14 +193,14 @@ MonoBehaviour:
 
 
 
-    Clicking on the popcorn when it''s undercooked or burnt gives
-    you a strike. Three strikes and you lose. Leaving burnt popcorn in the bucket
-    too long will result in an instant loss.
+    Clicking on the popcorn when it''s undercooked gives you a strike.
+    Clicking on the popcorn when it''s burnt will also give you a strike, but is
+    necessary since leaving burnt popcorn in the bucket too long causes an instant
+    loss. If you get 3 strikes you lose.
 
 
 
-    Don''t lose for long enough to
-    win.'
+    Don''t lose for long enough to win.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2541,6 +2541,7 @@ MonoBehaviour:
 
 
     Losing:
+
 
 
 
