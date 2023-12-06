@@ -7,7 +7,8 @@ public class Temperature : MonoBehaviour
 {
     public float temperature;
     private float maxTemperature = 200;
-    private Image tempBar;
+   // private Image tempBar;
+    public Slider tempArrow;
 
     public float TimeToBurn;
     public float TimeInRed;
@@ -24,7 +25,8 @@ public class Temperature : MonoBehaviour
         InRed = false;
         TimeInRed = 0;
         temperature = Random.Range(75f, 125f);
-        tempBar = GetComponent<Image>();
+        //tempBar = GetComponent<Image>();
+        //tempArrow = GetComponent<Slider>();
 
         RerollFavor();
     }
@@ -66,7 +68,9 @@ public class Temperature : MonoBehaviour
             }
         }
 
-        tempBar.fillAmount = temperature / maxTemperature;
+        //tempBar.fillAmount = temperature / maxTemperature;
+
+        tempArrow.value = temperature / maxTemperature;
 
         CheckBar();
     }
